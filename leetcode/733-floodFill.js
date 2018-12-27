@@ -25,6 +25,7 @@ var floodFill = function(image, sr, sc, newColor) {
       dfs(x, y + 1);
     }
   }
+  
   let target = image[sr][sc];
   dfs(sr, sc, target);
   return image;
