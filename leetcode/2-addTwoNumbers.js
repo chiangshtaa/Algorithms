@@ -21,8 +21,12 @@ var addTwoNumbers = function(l1, l2) {
   while (l1 || l2) {
     // add values while keeping track if it's null or not...
     let sum = 0;
-    if (l1) sum += l1.val;
-    if (l2) sum += l2.val;
+    if (l1) {
+      sum += l1.val;
+    }
+    if (l2) {
+      sum += l2.val;
+    }
     
     // if we are carrying from before, add one and set carry to false
     if (carry) {
@@ -32,15 +36,19 @@ var addTwoNumbers = function(l1, l2) {
     
     // keep track if you need to carry
     if (sum > 9) {
-      sum -= 10;
+      sum = sum % 10;
       carry = true;
     }
     
     // add final value to next l3 val
     l3.next = new ListNode(sum);
     l3 = l3.next;
-    if (l1) l1 = l1.next; 
-    if (l2) l2 = l2.next;
+    if (l1) {
+      l1 = l1.next; 
+    }
+    if (l2) {
+      l2 = l2.next;
+    }
   }
   // if there's one final carry left...
   if (carry) {
@@ -49,3 +57,5 @@ var addTwoNumbers = function(l1, l2) {
   }
   return l3_head.next;
 };
+
+
