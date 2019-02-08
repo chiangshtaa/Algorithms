@@ -10,6 +10,8 @@
  * @param {number} k
  * @return {number}
  */
+
+// recursive solution
 // var kthSmallest = function(root, k) {
 //   let result = [];
 //   const traverse = function(tree) {
@@ -24,6 +26,7 @@
 //   return result[k - 1];
 // };
 
+// iterative
 var kthSmallest = function(root, k) {
     let stack = [];
     while (root) {
